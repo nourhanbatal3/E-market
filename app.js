@@ -1,12 +1,13 @@
 require("dotenv").config();
 const express = require("express");  
-const mongoose = require("mongoose"); 
+//const mongoose = require("mongoose"); 
 const path = require('path'); 
 
 const app = express(); 
 app.use(express.json()); 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
 
 /*MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
@@ -29,5 +30,5 @@ app.get("/home", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
+  console.log(`App listening on port 3000`);
 });
