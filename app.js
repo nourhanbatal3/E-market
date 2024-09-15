@@ -9,6 +9,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+var searchClick = function() {
+  var text = document.getElementById("text-form").value;
+  // alert(text);
+  window.location.href = "www.<some-url>" + text;
+}
 /*MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -25,7 +31,7 @@ mongoose.connect(process.env.MONGO_URI, {
 const PORT = process.env.PORT || 3000; 
 
 
-app.get("/home", (req, res) => {
+app.get("/h", (req, res) => {
   res.render("main"); 
 });
 
