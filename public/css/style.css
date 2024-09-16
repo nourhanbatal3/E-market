@@ -15,3 +15,25 @@
 .nav-link:hover{
     color:black;     
 }
+
+.container {
+    position: relative;
+    width: 100%; /* Set the container width */
+}
+
+img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+}
+
+.text {
+    position: absolute;
+    top: 50%; /* Adjust position of text */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: black; /* Set the text color */
+    font-size: 24px; /* Adjust font size */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background color for readability */
+    padding: 10px; /* Optional: Add padding to the text */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}

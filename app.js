@@ -31,9 +31,23 @@ mongoose.connect(process.env.MONGO_URI, {
 const PORT = process.env.PORT || 3000; 
 
 
-app.get("/h", (req, res) => {
+app.get("/home", (req, res) => {
   res.render("main"); 
 });
+
+app.get("/about", (req, res) => {
+  res.render("about"); 
+});
+
+app.get("/CATEGORY", (req, res) => {
+  res.render("category"); 
+});
+
+app.get("/CONTACT", (req, res) => {
+  res.render("contact"); 
+});
+
+
 
 app.listen(PORT, () => {
   console.log(`App listening on port 3000`);
