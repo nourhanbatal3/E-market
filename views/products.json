@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name":" Tomayos",
+        "price": 50,
+        "image": "image/t.jpeg"
+    },
+    {
+        "id": 2,
+        "name":" banana",
+        "price": 25,
+        "image": "image/banana.webp"
+    }]
+ 

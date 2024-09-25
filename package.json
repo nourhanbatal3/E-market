@@ -2,6 +2,7 @@
   "name": "foodwp",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "app.js",
@@ -22,7 +23,8 @@
     "express-session": "^1.18.0",
     "jsonwebtoken": "^9.0.2",
     "method-override": "^3.0.0",
-    "mongoose": "^8.6.2"
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.6.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
