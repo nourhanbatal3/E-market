@@ -10,18 +10,20 @@ import indexRouter from './routes/index.js';
  import contactRouter from './routes/contact.js';
  import User from './models/User.js'
 
-
-mongoose
-  .connect("mongodb+srv://nourhanbatal8:xRT5meKbcAiAWwP4@cluster0.lkoqg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") /*fun*/ 
-  .then(() => {
-       console.log("connected successfully");
-   })
-   .catch((error) => {
-      console.log("error with connecting the mongoDB" , error);
-    }); 
+// Database connection calling 
+dotenv.config(); 
 
 
+const mongoURL = process.env.MONGODB_URL;
 
+if (!mongoURL) {
+  console.error('MongoDB URL not found in environment variables');
+  process.exit(1);  // Exit if URL is undefined
+}
+
+mongoose.connect(mongoURL)
+  .then(() => console.log('MongoDB Connected'))
+  .catch((err) => console.log('MongoDB connection error:', err));
 // Resolve file and directory paths
 
 const __filename = fileURLToPath(import.meta.url); //m4 fahma 7aga
@@ -29,8 +31,6 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-// Database connection calling 
-dotenv.config(); 
 
 // Middleware
 app.use(express.json());
@@ -60,11 +60,6 @@ app.get('/checkout',(req,res) => {
 })
 
 
-/*app.get("/getcart", async (req,res) => {
-  const product = await Product.find();
-  console.log("Details", product);
-  res.json(product);
-})*/ 
 //Another way 
 app.get("/getcart/:productId", async(req,res) => {
   const id = req.params.productId;

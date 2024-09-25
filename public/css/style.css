@@ -120,53 +120,6 @@ body.showCart .container{
     font-weight:300;
 
 }
-/*.cartTab .btn{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-.cartTab .btn button{
-    background-color: lightslategrey;
-    border: none;
-    font-family: Poppins;
-    font-weight: 500;
-    cursor: pointer;
-}*/
-/*.cartTab .listCart .item .img{
-    width: 100%;
-}
-.cartTab .listCart .item{
-    display: grid;
-    grid-template-columns: 70px 150px 50px 1fr;
-    gap: 10px;
-    text-align: center;
-    align-items: center;
-
-}
-.carTab .quantity span{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-color: #eee;
-    color: #555;
-    border-radius: 50%;
-    cursor: pointer;
-
-}
-.listCart .quantity span:nth-child(2){
-    background-color: transparent;
-    color: #eee;
-
-}
-.listCart .item:nth-child(even){ 
-    background-color: #eee1;
-}
-.listCart{
-    overflow:auto;
-} 
-.listCart::-webkit-scrollbar{
-    width: 0;
-
-}*/
 .gradient-custom-3 {
     /* fallback for old browsers */
     background: #84fab0;
